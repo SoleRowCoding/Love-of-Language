@@ -1,0 +1,22 @@
+﻿I'm sorry, but errors were detected in your script. Please correct the
+errors listed below, and try again.
+
+
+File "game/script.rpy", line 93: expected 'label_name' not found.
+    jump 1-1-1
+        ^
+
+File "game/script.rpy", line 95: expected 'label_name' not found.
+    jump 1-1-2
+        ^
+
+File "game/script.rpy", line 97: expected 'label_name_declare' not found.
+    label 1-1-1:
+         ^
+
+File "game/script.rpy", line 100: expected 'label_name_declare' not found.
+    label 1-1-2:
+         ^
+
+Ren'Py Version: Ren'Py 7.3.5.606
+Mon Oct 12 23:52:41 2020
