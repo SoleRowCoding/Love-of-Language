@@ -66,10 +66,11 @@ define gui.name_text_font = "NanumGothic.ttf"
 define gui.interface_text_font = "NanumGothic.ttf"
 
 ## 일반 대사의 글자 크기입니다.
-define gui.text_size = 22
+define gui.text_size = 33
 
 ## 캐릭터 이름의 글자 크기입니다.
-define gui.name_text_size = 30
+define gui.name_text_size = 33
+#define gui.name_text_xalign = 1.0
 
 ## 게임의 유저 인터페이스에서 글자의 크기입니다.
 define gui.interface_text_size = 22
@@ -96,7 +97,7 @@ define gui.game_menu_background = "gui/game_menu.png"
 ## 이러한 변수들은 한 번에 한 줄의 대사가 어떻게 화면에 표시되는지 제어합니다.
 
 ## 대사를 포함하는 텍스트 박스의 높이입니다.
-define gui.textbox_height = 185
+define gui.textbox_height = 170
 
 ## 화면에 텍스트박스를 세로로 배치합니다. 0.0은 최상단, 0.5는 중앙, 그리고 1.0은
 ## 최하단입니다.
@@ -105,8 +106,8 @@ define gui.textbox_yalign = 1.0
 
 ## 말하는 캐릭터의 이름을 텍스트 박스를 기준으로 배치합니다. 이것은 좌측이나 최
 ## 상단으로부터 전체 픽셀값의 숫자가 되거나, 0.5로 중앙이 될 수 있습니다.
-define gui.name_xpos = 240
-define gui.name_ypos = 0
+define gui.name_xpos = 55#140
+define gui.name_ypos = 25
 
 ## 캐릭터들의 이름을 수평으로 정렬합니다. 이것은 0.0으로 좌측 정렬, 0.5로 중앙,
 ## 그리고 1.0으로 우측 정렬될 수 있습니다.
@@ -116,23 +117,17 @@ define gui.name_xalign = 0.0
 ## 을 None으로 자동 설정할 수 있습니다.
 define gui.namebox_width = None
 define gui.namebox_height = None
-
-## 캐릭터의 이름이 들어 있는 박스의 테두리를 좌측, 상단, 우측, 하단의 순서로 정
-## 합니다.
-define gui.namebox_borders = Borders(5, 5, 5, 5)
-
-## 만약 참(True)이면, 네임박스의 배경은 바둑판식으로 배열(tiled)될 것이고, 거짓
-## (False)이면, 네임박스의 배경은 채워질(scaled) 것입니다.
 define gui.namebox_tile = False
+define gui.namebox_borders = Borders(0, 0, 0, 0)
 
 
 ## 텍스트박스에서 대사의 위치입니다. These can be a whole number of pixels
 ## relative to the left or top side of the textbox, or 0.5 to center.
-define gui.dialogue_xpos = 268
-define gui.dialogue_ypos = 50
+define gui.dialogue_xpos = 268-50
+define gui.dialogue_ypos = 25
 
 ## 픽셀값에서 대사의 최대 너비입니다.
-define gui.dialogue_width = 744
+define gui.dialogue_width = 744+80+80+80+10+20
 
 ## 대사 글자의 수평 정렬입니다. 이것은 0.0으로 좌측 정렬, 0.5로 중앙, 그리고 1.0
 ## 으로 우측 정렬이 될 수 있습니다.
@@ -206,7 +201,7 @@ define gui.choice_button_height = None
 define gui.choice_button_tile = False
 define gui.choice_button_borders = Borders(100, 5, 100, 5)
 define gui.choice_button_text_font = gui.text_font
-define gui.choice_button_text_size = gui.text_size
+define gui.choice_button_text_size = 19
 define gui.choice_button_text_xalign = 0.5
 define gui.choice_button_text_idle_color = "#cccccc"
 define gui.choice_button_text_hover_color = "#ffffff"
