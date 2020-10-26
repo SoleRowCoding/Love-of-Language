@@ -17,7 +17,8 @@ https://docs.google.com/document/d/10rEef5V4ZML139R-ThBqXOPvumIMVNy0Hhsq-G6FXBs/
 구글시트 : 리소스 목록 및 사용현황
 https://docs.google.com/spreadsheets/d/1Q_wrq8kuoXBFgs4dZi_qC4_fwVJkDi_8hgkjLQOYvnQ/edit?usp=sharing
 
-
+구글 프레젠테이션 : 배경 미리보기
+https://docs.google.com/presentation/d/1xXyR0zlFNi8nl7KiUtAsv1G7Dw4wPmkniaypsZu82io/edit?usp=sharing
 
 [ 현재 사용하지 않음 ]
 구글시트 : 초기 진행계획 공유
