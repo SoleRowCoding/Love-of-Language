@@ -1,8 +1,6 @@
 # Love of Language
 大作 비주얼노벨
 
-![title](./vnResource/etcGraphic/screenshot_0.png){: width="640" height="360"}
-
 <img src="./vnResource/etcGraphic/screenshot_0.png" width="640px" height="auto">
 
 |이름|메인포지션|
