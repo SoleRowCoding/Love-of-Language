@@ -298,8 +298,8 @@ screen navigation():
         spacing gui.navigation_spacing
 
         if main_menu:
-
-            textbutton _("시작하기") action Start()
+            $booeq = 0;
+            #textbutton _("시작하기") action Start()
 
         else:
 
@@ -309,7 +309,7 @@ screen navigation():
 
         textbutton _("불러오기") action ShowMenu("load")
 
-        textbutton _("환경설정") action ShowMenu("preferences")
+        textbutton _("설정") action ShowMenu("preferences")
 
         if _in_replay:
 
@@ -365,7 +365,27 @@ screen main_menu():
 
     ## use 명령어로 스크린 내에 다른 스크린을 불러옵니다. 메인 메뉴 스크린의 내
     ## 용물은 navigation 스크린에 있습니다.
-    use navigation
+    vbox:
+        style_prefix "navigation"
+
+        xpos 60
+        yalign 0.855
+
+        spacing 50
+
+
+        imagebutton auto "gui/button/btn_newgame_%s.png" action Start()
+
+
+        imagebutton auto "gui/button/btn_continue_%s.png" action ShowMenu("load")
+
+        imagebutton auto "gui/button/btn_setting_%s.png" action ShowMenu("preferences")
+
+        if renpy.variant("pc"):
+
+            ## The quit button is banned on iOS and unnecessary on Android and
+            ## Web.
+            imagebutton auto "gui/button/btn_exit_%s.png" action Quit(confirm=not main_menu)
 
     if gui.show_name:
 
@@ -387,7 +407,7 @@ style main_menu_frame:
     xsize 280
     yfill True
 
-    background "gui/overlay/main_menu.png"
+    #background "gui/overlay/main_menu.png"
 
 style main_menu_vbox:
     xalign 1.0

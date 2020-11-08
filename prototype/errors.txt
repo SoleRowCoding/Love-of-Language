@@ -2,9 +2,45 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 14: expected statement.
-    prologue scene start
-             ^
+File "game/script.rpy", line 393: invalid syntax
+    isanswer++
+    
+
+File "game/script.rpy", line 399: invalid syntax
+    isanswer++
+    
+
+File "game/script.rpy", line 406: invalid syntax
+    isanswer++
+    
+
+File "game/script.rpy", line 414: invalid syntax
+    isanswer++
+    
+
+File "game/script.rpy", line 418: invalid syntax
+    isanswer++
+    
+
+File "game/script.rpy", line 424: invalid syntax
+    isanswer++
+    
+
+File "game/script.rpy", line 432: invalid syntax
+    isanswer++
+    
+
+File "game/script.rpy", line 438: invalid syntax
+    isanswer++
+    
+
+File "game/script.rpy", line 444: invalid syntax
+    isanswer++
+    
+
+File "game/script.rpy", line 448: invalid syntax
+    isanswer++
+    
 
 Ren'Py Version: Ren'Py 7.3.5.606
-Tue Oct 20 00:05:30 2020
+Sun Nov 08 18:26:07 2020

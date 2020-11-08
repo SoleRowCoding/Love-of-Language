@@ -17,7 +17,7 @@ define config.name = _("prototype")
 ## 위에 주어진 제목이 주 메뉴 화면에 표시되는지 결정합니다. 제목을 숨기려면 이것
 ## 을 False로 설정하십시오.
 
-define gui.show_name = True
+define gui.show_name = False
 
 
 ## 게임의 버전입니다.
@@ -59,7 +59,7 @@ define config.has_voice = True
 ## 처리를 제거하십시오. 이 파일은 중지되거나 다른 파일이 재생 될 때까지 계속 재
 ## 생합니다.
 
-# define config.main_menu_music = "main-menu-theme.ogg"
+define config.main_menu_music = "audio/title.mp3"
 
 
 ## 번역 ##########################################################################
@@ -72,7 +72,7 @@ define config.has_voice = True
 
 define config.enter_transition = dissolve
 define config.exit_transition = dissolve
-
+define config.rollback_enabled = False
 
 ## 게임 메뉴 화면 사이입니다.
 

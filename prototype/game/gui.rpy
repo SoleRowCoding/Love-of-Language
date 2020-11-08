@@ -35,7 +35,7 @@ define gui.idle_small_color = '#888888'
 
 ## 버튼(button)과 막대(bar)에 커서를 올렸을 때(hovered) 사용됩니다.
 define gui.hover_color = '#0099ff'
-
+define gui.show_name = False
 ## 텍스트 버튼(text button)에 선택됐지만(selected) 포커스되지(focused) 않았을 때
 ## 사용됩니다. 버튼(button)은 현재 화면이거나 설정값인 경우 선택됨(selected)이
 ## 됩니다.
@@ -196,12 +196,12 @@ define gui.quick_button_text_selected_color = gui.accent_color
 ##
 ## 선택 버튼은 인-게임 메뉴에 사용됩니다.
 
-define gui.choice_button_width = 790
+define gui.choice_button_width = 1100
 define gui.choice_button_height = None
 define gui.choice_button_tile = False
 define gui.choice_button_borders = Borders(100, 5, 100, 5)
 define gui.choice_button_text_font = gui.text_font
-define gui.choice_button_text_size = 19
+define gui.choice_button_text_size = 30
 define gui.choice_button_text_xalign = 0.5
 define gui.choice_button_text_idle_color = "#cccccc"
 define gui.choice_button_text_hover_color = "#ffffff"
