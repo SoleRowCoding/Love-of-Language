@@ -1,4 +1,5 @@
-credit
+# 언어의 사랑
+언어의 사랑이 이용한 타사, 타인의 리소스는 해당 저작물에 이미 부여된 라이센스를 따릅니다.
 
 # 자체 리소스
 기재되지 않은 모든 리소스는 Team SolerowCoding에서 권리를 보유하고 있습니다. 
@@ -11,7 +12,12 @@ credit
 * 학교 다른 동아리방 : Chalo Garcia	(https://pixabay.com/images/id-4837911/)	
 
 # 효과음
-* 
+* Door Slam Sound - by 무료저작권세상 (https://www.youtube.com/watch?v=c9nJzXipETM)
+* Alarm1 - by kwahmah_02 (https://freesound.org/s/250629/)
+* Analog Alarm Clock - by bone666138 (https://freesound.org/s/198841/)
+* smartphone_vibrating_alarm_silent - by EricsSoundschmiede (https://freesound.org/s/396130/)
+* elevator 02 - by universodemalaonda (https://freesound.org/s/502339/)
+* 05 Elevator Bing - by soundslikewillem (https://freesound.org/s/340750/)
 
 # 배경음악
 * CUTIE KITTY by UmbrTone
