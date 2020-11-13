@@ -3,6 +3,7 @@ image bg black = "#000"
 image phoneclock = "images/prologue_phone.jpg"
 image bg campus_lectureBuilding_day = "images/campus_lectureBuilding_day.jpg"
 image bg campus_ally_day = "images/campus_ally_day.jpg"
+image bg campus_ally_night = "images/campus_ally_night.jpg"
 image bg campus_newBuilding_day= "images/campus_newBuilding_day.jpg"
 image bg campus_etcBuilding_aisle="images/campus_etcBuilding_aisle.jpg"
 image bg campus_otherClubroom="images/campus_otherClubroom.jpg"
@@ -10,7 +11,13 @@ image bg campus_newBuilding_hall="images/campus_newBuilding_hall.jpg"
 image bg campus_clubroom ="images/campus_clubroom.jpg"
 image bg campus_classroom_1_indoor = "images/campus_classroom_1_indoor.jpg"
 image bg campus_classroom_1_outdoor = "images/campus_classroom_1_outdoor.jpg"
-
+image bg campus_backgate_day= "images/campus_backgate_day.jpg"
+image bg campus_backgate_night= "images/campus_backgate_night.jpg"
+image bg campus_bench_night="images/campus_bench_night.jpg"
+image bg campus_classroom_2="images/campus_classroom_2.jpg"
+image bg campus_newBuilding_day="images/campus_newBuilding_day.jpg"
+image bg campus_maingate_day="images/campus_maingate_day.jpg"
+image bg restaurant="images/restaurant.jpg"
 
 image bg loading_1 ="images/loadingScreen/ch01.png"
 image bg loading_2 ="images/loadingScreen/ch02.png"
@@ -44,7 +51,7 @@ define pauses = Pause(.5)
 
 label start:
     stop music fadeout 1.0
-    jump chapter2_2
+    #jump chapter2_2
     #prologue scene start
     $quick_menu = False
     scene bg loading_1 with dissolve
@@ -906,14 +913,14 @@ menu:
     m "「그럼 지금 오시는 건가요?"
     h1 "「어차피 얼마 안걸려! 금방 갈께!」"
     m "그러고 나서 바로 전화가 끊어졌다."
-    show extra3 at center with dissolve
+    show extra1 at center with dissolve
     show extra2 at right with dissolve
     $extraname="부원 A"
     extra "「온대 온대?」"
     m "「오…오신다는데 지금 당장.」"
     $extraname="부원 B"
     extra "「뭐하냐 애들아 회장님이 오신단다! 바로 키고 준비하자!」"
-    hide extra3 with dissolve
+    hide extra31with dissolve
     hide extra2 with dissolve
     # 퇴장 : 엑스트라 군중
     m "애들은 신나서 분주하게 준비하고 있었다. 선배의 바로 나온 쿨한 대답에 약간 당황하였는 나였지만 선배가 오는걸 발견하자마자 생각이 거기서 끊겼다."
@@ -1004,8 +1011,385 @@ menu:
     $extraname="학생회 B"
     extra "「이번년도 행사도 성공적이군요. 그렇지 않나요 선배?」"
     h1 "「그…그렇네! 역시 내가 테마를 잘 정했어! 배고프다 빨리 밥 먹으러 가자!」"
-# 분기 2_3_1 종료 -------------------
+    window hide 
+    scene bg black with fade 
+    $renpy.pause(2.0,hard=True)
+label chapter3_1:
+$quick_menu = False
+scene bg loading_3 with dissolve
+show mirae general at right with dissolve
+$renpy.pause(4,hard=True)
+hide mirae with dissolve
+scene bg campus_ally_day with fade
+$quick_menu = True
+play music "audio/travel.mp3" 
+# Chapter 4 - section 1 script.
+###############################
+
+# 배경 전환 : (none) -> campus_ally_day
+# 브금 루프 시작 : 여행(travel)
+
+m "「여름방학이 물 흐르듯 빠르게 지나가고 벌써 2학기의 시작을 알리는 개강의 종이 울렸다.」"
+m "「그동안 미래 선배와 하린이가 중간중간 나한테 전화하여 어디 같이 가서 놀자는 전화가 오기는 하였지만, 이제 시간을 헛으로 쓸 수 없기 때문에 매번 정중한 거절을 하였다.」"
+m "「모든 수업을 마친 후, 나는 방학에 있었던 일을 친구들과 이야기 하며 걸어가고 있었다.」"
+
+# 등장 : 엑스트라 군중(others_black) : 가운데
+show extras at center with dissolve
+
+$extraname="친구 A"
+extra "음……. 넌 제정신이 아니구나."
+m "어째서?"
+$extraname="친구 B"
+extra "돌았구만... 연애도 못하고 졸업하려고 그러는거야?"
+$extraname="친구 C"
+extra "이제 취업을 신경 쓸 때이긴 하지.."
+m "오 너만큼은 내 마음을 이해하는구나!"
+extra "근데 이건 아니지.."
+m "왜?!"
+extra "여자가 어디 같이 가자는 말을 아무한테나 하는 줄 알아?"
+extra "정말 친한 사이라서 그럴 수도 있는데, 그게 일반적이냐고"
+extra "얘 군대갔다오더니 순 고자가 다 돼서 왔는데? 주변좀 잘 보고살아 친구야."
+m "실없는 소리 말아. 난 집갈래.."
+
+hide extras with dissolve
+# 퇴장 : 엑스트��� 군중(others_black)
+
+scene bg campus_backgate_day with dissolve
+# 배경 전환 : campus_ally_day -> campus_backgate_day
+m "「고백이라. 그 단어는 여자친구가 한번도 생기지 않은 나에게 생소한 말이였다. 그리고 그 둘이서 나한테 호감이 있다니 그건 생각치도 못한 상황이였다.」"
+m "「하린이는 나한테는 귀여운 여동생이고 미래 선배는 듬직하고 믿음직한 선배였을 뿐인데 이러한 관계가 바뀌어 버린다면? 만약 감정이 안좋은 방향으로 바뀐다면?」"
+m "「수많은 생각들이 뒤엉켜 내 머리가 지끈거렸다. 조언을 얻기 위해 나는 전화기를 들어 자주 연락하던 전화번호로 전화를 걸었다.」"
+$extraname="???"
+extra "오 웬일? 너가 전화를 다하고?"
+m "시간 있냐?"
+extra "냐야 뭐 언제든 괜찮지. 이시간에 전화를 다 하네. 또 무슨일이야?"
+m "……내 마음을 잘 읽는 다니까 너는…"
+extra "어디서 볼까?"
+stop music fadeout 1.0
+window hide 
+scene bg black with fade 
+$renpy.pause(2.0,hard=True)
+
+label chapter3_2:
+# chapter 4 - section 2
+scene bg campus_bench_night with dissolve
+# 배경 전환 : (none) -> campus_bench_night
+# 브금 루프 시작 : 슬픔(sad)
+play music "audio/sad.mp3" 
+
+m "「심란하거나 고민이 많을 때 오는 이 벤치…. 벌써 여름이 지나가고 가을이 왔는지, 바닥에 낙엽이 가득했다..」"
+m "「이 경치를 보면 내 마음과 같은 풍경이라 가만히 쳐다보게 된다.」"
+m "「그런 순간을 느끼면서 멍하니 있으면 어느순간 해결책이 생기기도 하지만….. 」"
+m "「지금은 어떤 해결책도 떠오르지 않는다.」"
+
+#등장 : player_black : 가운데e
+extra "무슨 생각을 깊게 하는 거야"
+m "「이 친구는 남민재. 우연히 초등학교 농구부에서 만나 지금까지 쭉 알고 지낸 소꿉친구이다. 」"
+m "「사교성도 좋고 경험한 일도 다양해서, 내가 고민이 있을 때 명쾌한 대답을 내놓아준다. 마음이 놓이는 길잡이 역할을 해주고 있다.」"
+m "어… 민재 왔네…"
+$extraname="남민재"
+extra "뭘 그렇게 고민인 거지? 너가 그렇게 심각한 표정을 지으면서 있는 모습 내가 살면서 처음본다 야"
+m "음… 그게 말이지…"
+m "「난 그동안 지금까지 미래 선배와 하린이와 지금까지 있었던 일들을 이야기 하였다.」"
+m "「그러나 그 친구가 한 말은 정말 충격적이었다.」"
+extra "넌 …. 진짜 …. 찐이다….."
+m "아니 왜?"
+extra "음… 너가 아무리 고자라도 이정도는 알거라고 생각 했는데.. 은근 심하네…"
+m "알기 쉽게 이야기좀 해봐"
+m "「민재는 음료수 캔을 들며 설명하기 시작하였다. 민재의 설명을 통해 나는 그 둘이 나한테 호감이 있다는 것에 다시 한번 놀랐다.」"
+m "난 …단지… 일종의 선후배 사이로 생각하고 있었는데."
+extra "지금은 그렇지, 그런데 결국 선택해야 하는 날이 오게 될거야. 잘 생각해봐. 상황을 애매하게 만들지 말고 잘 정리해야지」"
+m "「나는 아무말도 못하고 나무 너머의 건물만 바라봤다. 나는 머리가 복잡해져 갔다.」"
+#퇴장 : player_black
+m "「이야기 들어줘서 고맙다고 이야기하고 난 뒤 일어섰다」"
+
+scene bg campus_ally_night with fade
+#배경 전환 : campus_bench_night -> campus_ally_night
+
+m "「아무 생각없이 길을 걸었다.」"
+
+stop music fadeout 1.0
+window hide 
+scene bg black with fade 
+$renpy.pause(2.0,hard=True)
+
+label chapter4_1:
+$quick_menu = False
+scene bg loading_4 with dissolve
+show harin general at center with dissolve
+show mirae general at right with dissolve
+$renpy.pause(4,hard=True)
+hide mirae with dissolve
+scene bg campus_classroom_2 with fade
+$quick_menu = True
+play music "audio/general_1.mp3" 
+# chapter 5 - section 1
+
+# 배경 전환 : (none) -> campus_classroom_2
+# 브금 루프 시작 : 일반_1(general_1)
+
+m "「별 특별한 일 없이 2학기가 지나가고있었다.」"
+m "「우연히 시간표가 겹친건지, 오전에는 미래 선배와, 오후에는 하린이와 같이 수업을 듣고 있다.」"
+m "「뭔가.. 이상한데.. 이렇게 겹칠 수가 있는건가?」"
+m "「중간고사가 끝난지 얼마 되지 않아, 수업 내내 어수선했다. 수업도 비교적 일찍 끝나 집에 가서 쉬기 위해 빠르게 가방을 챙겼다.」"
+h1 "주인공…주인공!"
+m "「뒤에서 콕콕 찌르는 느낌이 나더니 선배가 부르는 소리가 났다.」"
+
+show mirae general at center with dissolve
+#등장 : 선배(mirae_sweat_general) : 가운데
+m " 선배, 무슨 일이에요?"
+h1 "음 그건 아니고….."
+m "「강의실에서 학생들이 빠져나가는 것을 본 미래 선배는 뜸을 들였다.」"
+h1 "잠만 여기에서 기달려 줄래?"
+m "「나는 영문도 모른채 대답을 하고 선배가 이야기 할 때까지 기다렸다. 선배가 주위 눈치를 보고 있었다.」"
+m "「마지막 학생이 나가자 미래선배는 내 옆자리에 와서 앉더니 나한테 무언가를 건네주었다.」"
+h1 "자 주인공."
+m "어라 이게 뭔데요? 이거, 불꽃 축제 티켓?"
+m "「선배가 건네준 티켓은 TV에서 계속해서 방송하던 불꽃 축제 티켓이였다. 연예인의 라인업이 굉장해서 예매하기 힘든 표였다.」"
+m "이 티켓, 한정판 아니에요? 게다가 이거 세계에서 유명한 사람들이 오는 축제잖아요? 이 티켓 게다가 추첨식이여서 500 : 1 정도로 알았는데…"
+h1 "아 [playername] 아니랄까봐! 같이 이번주 토요일날 축제 가자고 주는거야. 어때 같이 갈래?"
+m "「미래 선배는 내 말을 끊으며 고개를 붉혔다. 나는 잠깐 고민하다가 대답하였다.」"
+m "휴일에 스케쥴이 어떻게 될지 잘 모르겠어요. 일단 확인하고 내일 말해 드릴께요."
+m "「나의 대답에 미래 선배는 기운이 빠져 보였으나 이내 정신을 차리고 웃으며 대답하였다.」"
+h1 "그러면 내일 꼭 답변 주는거다~?"
+m "네네 알겠어요. 내일 봬요 선배."
+#퇴장 : 선배(mirae_sweat_general)
+hide mirae with dissolve
+m "「나는 대답을 미루고 강의실을 나오게 되었다.」"
+
+scene bg campus_newBuilding_day with dissolve
+show extras at center with dissolve
+# 배경 전환 : campus_classroom_2 -> campus_newBuilding_day
+#등장 : 엑스트라 군중(others_black) : 가운데
+$extraname="친구 A"
+extra "뭐냐 뭐냐, 선배가 뭐라 했어?"
+m "아니 별거 아니고 축제 구경 가자고."
+$extraname="친구 B"
+extra "축제라면 요즘 엄청 광고때리는 불꽃축제? 키야, 그래서! 간다고 한거야?"
+m "아니, 아직 휴일날 무슨일이 생길지 모르잖아. 내일 이야기 한다고 했어."
+$extraname="친구 A"
+extra "내일 무조건 YES! 라고 해야지. 너 미래 선배가 남들한텐 얼마나 철벽인줄 알어?"
+$extraname="친구 B"
+extra "맞아 맞아, 그동안 남자 한 트럭이 와서 미래 선배한테 사귀자고 구애 했지만 냉정하게 다 내쳤단 말이야"
+$extraname="친구 B"
+extra "그중에서 끈질기게 대쉬 했던 사람에게 한 말이 '너같은건 내 스타일 아니니까 제발 꺼져줄래?' 였다니까!"
+$extraname="친구 A"
+extra "게다가 주변에서 친근하게 이야기 하는 남자는 너 밖에 없어! "
+extra "우리 같은 일반인한테는 간단하게만 이야기 하고 끝나는데 너하고는 같이 수업듣고 엉? 동아리실에서 길게 대화나 나누고 엉?"
+m "뭔 말도안되는. 오래 본 사이라 그렇지 그냥. 너희들도 한번 대쉬해 보던지, 난 잘 모르겠고 집이나 간다"
+#퇴장 : 엑스트라 군중(others_black)
+hide extras with dissolve
 
 
-# 배경 전환 :  학교 신축건물앞 낮 -> (none)
-# 브금 루프 종료 : 행복
+scene bg campus_maingate_day with dissolve
+# 배경 전환 : campus_newBuilding_day -> campus_maingate_day
+m "「친구들의 야유를 뒤로 한 채로 학교 정문을 나섰다. 그리고 선배와 있었던 일들을 되돌아 보았다.」"
+m "「그러고 보니 선배과 남자들과 이야기 한 것을 본 적이 없었다. 게다가 친구들이 이야기 하는 것을 되짚어 보기 시작하자 선배의 행동이 다르게 느껴졌다.」"
+m "「또한 방금 전 미래 선배가 이야기 하면서 얼굴을 붉힌 것이 이해가 되기 시작하였다. 선배는 용기를 내서 나한테 같이 가자고 고백을 한 것이 되었다.」"
+m "「이런 상황들이 맞아 떨어지자 나는 선배를 어떤 모습으로 만나야 할지 고민이 되었다.」"
+m "「이런저런 생각을 하며 버스를 기다리는데, 갑자기 검은 양복을 입은 사람들이 내 주변을 둘러쌌다.」"
+show extras at right with dissolve
+#등장 : 엑스트라 군중(others_black) : 오른쪽
+$extraname="검은 양복"
+extra "저기 혹시 [playername] 맞으신가요?"
+m "「그 중 빨간 넥타이를 맨 사람이 나 한테 물어보자, 어디 납치되는 것 아닌가 갑자기 두려워 지기 시작하였다. 게다가 내 이름을 어떻게 아는 거지?」"
+m "네….마…맞는데요?"
+stop music fadeout 1.0
+
+# 브금 루프 종료 : 일반_1(general_1)
+# 브금 루프 시작 : 긴급(emergency)
+play music "audio/emergency.mp3" 
+extra "잠깐 저희와 같이 가주셔야 겠습니다."
+m "저 잘못한게 없는…데요? 제가 잘못한거 있으면 바로 고칠께요! 아..아니 그냥 바로 사과할께요!"
+extra "그런게 아닙니다. 저희만 따라오시면 아무일도 없을 것입니다."
+m "「나는 위협적인 남자들이 점점 내 주변을 에워싸면서 협박적인 말투로 답해오자, 무서움이 극에 다해 아무말이나 튀어 나왔다.」"
+m "「편하게 집에 가서 생각해 보고 싶었는데 이게 뭐야!!!」"
+$extraname="???"
+extra "아니 너희들 뭐해!~!!!!!!"
+m "「갑자기 뛰어오는 한 고성에 남자들은 움찔 거렸다. 그리고 소리가 나는 방향을 일제히 바라보았다.」"
+extra "왜 주인공 선배를 데려오라고만 했지 이렇게 에워싸면 절대 안오잖아!"
+$extraname="검은 양복"
+extra "아가씨 그게…."
+m "「덩치 큰 남자들이 여성한테 아무 말도 못하는걸 보자 드라마나 라노벨에서만 보았던 부잣집 아가씨 포스가 풍겼다. 근데 아가씨가 어디에서 많이 본거 같은데?」"
+
+show harin general at left with dissolve
+stop music fadeout 1.0
+#등장 : 후배(harin_sweat_general) : 왼쪽
+# 브금 루프 종료 : 긴급(emergency)
+play music "audio/what.mp3" 
+
+# 브금 루프 시작 : 어리둥절(what)
+m "하린아?"
+h2 "선배 미안해요! 좋은 레스토랑에 같이 가서 저녁밥이나 먹고 싶었는데 이런 느낌으로 데려오고 싶지 않았어요! 진짜 미안해요!"
+m "「하린은 연신 미안하다고 이야기를 한뒤 주변 남자들을 둘러보면서 얼굴을 찡그렸다. 쩔쩔매어 아무 말도 못하는 사람들이 너무 가관이였다.」"
+#퇴장 : 엑스트라 군중(others_black)
+hide extra with dissolve
+
+m "「나는 정신을 가다듬고 괜찮다고 대답을 하였다. 하린이는 마음이 편치 않아 보였다.」"
+h2 "선배 제가 저녁밥을 살께요! 그래도 불편하시다면 내일 만나서 제가 밥이라도 살께요!"
+m "괜찬아. 하린이가 밥 사준다고 하니 가볼까? 그리고 신경쓰지마 그 사람들도 이럴려고 한건 아니잖아."
+h2 "알겠어요 선배, 그러면 제 차 타고 가죠!"
+m "그래 차… 차?!"
+m "「하린이는 옆에 있던 큰 스포츠카에 나를 욱여넣듯이 타게 하였다. 그리고는 운전석에 앉아 출발했다.」"
+m "「무서운 속도로 달리는 차에서 안전벨트만을 붙잡고 사고만 나지 않길 조용히 빌었다.」"
+
+hide harin with dissolve
+stop music fadeout 1.0
+#퇴장 : 후배(harin_sweat_general) 
+# 브금 루프 종료 : 어리둥절(what)
+# 배경 전환 : campus_maingate_day -> (none)
+window hide 
+scene bg black with fade 
+$renpy.pause(2.0,hard=True)
+
+label chapter4_2:
+play music "audio/happy.mp3"
+scene bg restaurant 
+# Chapter 5 - section 2
+# + 에필로그
+
+# 배경 전환 : (none) -> restaurant 
+# ********************** 레스토랑 배경 새로 만들겠습니다 그냥... 깃허브 / 디코에 720p 사진 올릴 예정입니다.
+# 브금 루프 시작 : 행복(happy)
+
+
+m "「하린이가 데리고 온 레스토랑에는 수많은 고급진 장식품들과 딱봐도 비싼 와인들이 즐비해 있는 곳이였다.」"
+m "「메뉴판을 보니.. 0이 4개.. 5개.. 6개.. ?」"
+m "「하린이는 그 반응을 예상했는지 메뉴판을 가로채 주문했다.」"
+
+scene harin general at center with dissolve
+# 등장 : 후배(harin_sweat_general) : 가운데
+h2 "선배거도 저랑 같은 코스로 했어요. 괜찮죠?"
+m "아니 그게, 가격이,"
+h2 "누가 선배 아니랄까봐! 신경 쓰지 마요!! 어차피 선배 취향에 맞춰 음식도 시켰으니까 나오기만을 기다리기만 하면 되니까 편하게 있어요."
+m "「하린이는 얼굴을 붉히며 나의 말을 끊었다. 무언가 데자뷰가 일어나는 듯 하였지만 나는 고분히 하린이의 말에 따랐다.」"
+m "「그러고 보니 하린이가 나한테 할 말이 있다고 했지?"
+m "하린아 그러고 보니…"
+h2 "잠만요 선배, 와인은 이걸로 주시고…."
+m "「하린이는 내말을 잠깐 멈추게 한 뒤 와인을 시켰다. 얼마 안되어 직원이 와서 와인을 따랐다.」"
+m "「잔을 다 따르자 마자 하린이는 잔을 들어 와인을 원샷 했다.」"
+m "하린아? 너 차 몰고 왔잖아. 술 마셔도 돼?"
+h2 "어차피 사람 시켜서 가져가게 하면 돼요. 그리고 선배 앞에서 술이 들어가지 않으면 제대로 말을 못할거 같아요. 후우."
+m "???"
+m "「하린이는 입가를 닦고나서 나를 바라보았다. 벌써 술기운이 올라오기 시작하였는지 하린이의 얼굴은 점점 빨개져 갔다.」"
+m "「갑자기 무언가 생각 났는지 가방에서 무언가를 꺼내 었다.」"
+h2 "자요."
+m "「하린이가 내 앞으로 내민건… 이번에 새로 개장한 테마 파크 티켓이였다.」"
+m "이건 어떻게 구한거야??? 그리고 이 티켓은…"
+h2 "잠만요 선배. 일단 가격이야기는 제쳐두고, 이번에 선배와 같이 가고 싶어서 그래요. 이번주 토요일에 시간 되나요?"
+m "일단 스케쥴이 있는지 봐야 할거 같은데…."
+h2 "그러면 내일 이야기 해줘요 꼭!"
+m "「하린이가 상기된 표정으로 나의 손을 잡고 말하니 나는 차마 거절을 할 수 없었다.」"
+m "아 알겠어. 일단… 손좀 놓고…"
+m "「하린이는 자신이 무슨 말을 했는지 깨닫자 얼굴이 더더욱 빨개지며 급하게 손을 놓았다.」"
+h2 "미안해요 선배, 그래도 술기운이 없으면 이런 말을 못할거 같아서 그랬어요… "
+m "「이야기를 마치고 음식이 나오자 후배는 원래의 모습으로 돌아간듯 즐거운 이야기를 나누었다.」"
+hide harin with dissolve
+# 퇴장 : 후배(harin_sweat_general) 
+# 배경 전환 : restaurant -> house_players
+scene bg house_players with dissolve
+# 브금 루프 종료 : 행복(happy)
+stop music fadeout 1.0
+
+m "「하린이와 헤어지고 집으로 돌아왔다. 차로 꼭 데려다 줘야겠다는걸 한사코 거절했다.」"
+m "「며칠전 민재가 해 준 말이 떠올랐다.」"
+m "「'친하게 지내던 사람들이 갑자기 예상치 못하는 행동을 한다고? 그럼 너한테 관심있는게 아닌지 생각해봐. 일단 행운을 빌께'」"
+
+m "「보통 하린이는 학교에서 '얼음공주' 라고 불렸다. 그동안 숱한 고백들도 바로 거절할 정도로 이성에 대해서는 냉랭했다.」"
+m "「그러나 유독 나한테 만큼은 그런 모습을 그동안 본적이 한 번도 없었다. 오늘 테마파크에 가자는 말, 고백이나 다름없는 것 아닌가?」"
+m "「아까 선배와 있었던 일이 머릿속을 스쳤다. 하린이가 보자고 한 날, 미래선배가 보자고 한 날. 날짜가 똑같다.」"
+m "「침대에 누워 핸드폰을 만지작 거리며 생각에 잠겼다」"
+
+
+######################################################################################################################
+#분기 5_2_1 -------------------------------------------------------------
+m "「나는 내일, 대체 누구를 선택해야 하는걸까?」"
+
+menu:
+        "{color=#066de2}Ending{/color}({color=#63a35c}\"윤미래\"{/color});":
+            m "「그래 선배의 고백을 받아들이자. 나는 마음속으로 결정한 뒤 내일이 밝기를 기다렸다….」"
+# 배경 전환 : house_players -> (none)
+            m "「………………………..」"
+            m "「…………………………」"
+# 배경 전환 : (none) -> house_players
+            m "「금요일 아침. 일어나자 마자 선배에게 연락했다.」"
+            m "「'잠깐 시간 나요 미래 선배?'」"
+# 배경 전환 : house_players -> (none)
+            m "「……………………..」"
+            m "「………………………」"
+# 배경 전환 : (none) -> campus_ally_day
+            m "「학교 산책로에서 나는 기다리는 선배를 보았다. 다행이도 선배도 나도 금요일에는 강의가 거의 없어 오전에 만날 시간을 만들 수 있었다.」"
+            m "선배!"
+# 등장 : 선배(mirae_sweat_general) : 가운데
+            m "「미래 선배는 나를 보자 잠깐 멈칫하더니 이내 웃으면서 나한테 손을 흔들었다. 내가 다가가자 선배는 다시 얼굴이 조금씩 빨개지는게 보였다.」"
+            h1 "그래서… 어떻게 할 생각인데?"
+            m "선배 그 전에 제가 먼저 말해도 돼요?"
+            m "「나도 긴장하였는지 딱딱한 말투에 선배도 놀라 나를 쳐다보았다. 그러고 이내 고개를 끄덕였다.」"
+            m "선배, 그…. 선배를 받아들이기에는 저 한테는 너무 과분해요… 그래도 제가 좋으시다면, 저랑 사귀어 줄래요?"
+            m "「미래 선배는 나의 얼굴을 잠시동안 쳐다보더니 갑자기 눈물을 흘리기 시작하였다. 나는 조용히 선배를 안으면서 아무말도 하지 않았다. 한참 뒤 선배의 조용한 목소리가 들려왔다.」"
+            h1 "난 주인공의 고백을 받아서… 너무 좋아….."
+
+# 브금 루프 시작 : 갬동(title)
+            m "「산책로의 핀 단풍나무들이 우리들을 축복하는지 화려하게 붉은 잎을 휘날렸다.」"
+# 퇴장 : 선배(mirae_sweat_general) 
+# 배경 전환 :  campus_ally_day -> (none)
+
+# 에필로그 섹션 ############
+# 배경 전환 : (none) -> campus_maingate_day
+            m "「2학기 기말고사가 끝나고 겨울방학이 다가오고 있었다. 오후 수업이 끝나고 학교 정문으로 향했다.」"
+            m "「저 멀리 입김으로 손을 녹이고 있는 미래 선배가 보였다.」"
+            m "미래 선배~!"
+            m "「기다리던 미래 선배는 나를 보더니 행복한 표정으로 다가왔다.」"
+            h1 "빨리 왔네, [playername]? 지금쯤 수업 끝나서 나오고 있어야 되는거 아니야?"
+            m "오늘 선배 만나러 가라고 교수님이 빨리 끝내주셨나봐"
+            h1 "그으래애~? 좋아 그럼 빨리 밥먹으러 가자!"
+            m "「미래 선배는 내 손을 잡고 빠르게 식당으로 향했다. 바람에 날린 샴푸향이 풍겨왔다.」"
+
+        "{color=#066de2}Ending{/color}({color=#63a35c}\"유하린\"{/color});":
+#------------- '2. 유하린' 을 고를경우 ------------------------------------------------------------------------------
+           m "「그래 후배의 고백을 받아들이자. 나는 마음속으로 결정한 뒤 내일이 밝기를 기다렸다….」"
+# 배경 전환 : house_players -> (none)
+           m "「………………………..」"
+           m "「…………………………」"
+# 배경 전환 : (none) -> house_players
+           m "「금요일 아침. 일어나자 마자 선배에게 연락했다.」"
+           m "「'잠깐 시간 나니, 하린?'」"
+# 배경 전환 : house_players -> (none)
+           m "「……………………..」"
+           m "「………………………」"
+
+# 배경 전환 : (none) -> campus_bench_day
+           m "「벤치에서 캔커피를 마시고 있었다. 멀리서 하린이가 들어오는 것이 보였다.」" 
+# 등장 : 후배(harin_sweat_general) : 가운데
+           m "「손을 흔들자 하린이는 나를 보더니 잠깐 멈칫 하였다. 그러고 이내 내 건너편에 앉았다.」"
+           h2 "어제 죄송해요… 제가 술기운에 그만… 그 어제 일은.."
+           m "하린아."
+           m "「내가 잠깐 말을 끊자 하린이는 다시 멈칫하더니 이내 나와 눈이 마주쳤다. 」"
+           m "말하고 싶은게 있어."
+           m "「나는 하린이 옆으로 가 앉으면서 이야기를 계속하였다. 」"
+           m "나한테 넌 정말 과분한 사람이라고 생각해. 그리고 나한테 호감을 가져준걸 정말 고맙게 생각해…. 나라도 정말 괜찮다면, 한 번 만나볼래?"
+           m "「그 순간 하린이는 갑자기 내 품으로 얼굴을 파묻더니 울기 시작하였다. 나는 조용히 하린이를 감쌌다. 한참 뒤 하린의 목소리가 들려왔다.」"
+           h2 "전 [playername] 선배의 고백을 받아서 너무 좋아요…."
+# 브금 루프 시작 : 갬동(title)
+           m "「의자 사이로 감돌던 바람이 멎었다. 시간이 멈춘듯 정적으로 온 공간이 가득찼다.」"
+# 퇴장 : 후배(harin_sweat_general)
+# 배경 전환 :  campus_bench_day -> (none)
+
+# 에필로그 섹션 ####################3
+# 배경 전환 : (none) -> campus_maingate_day
+           m "「2학기 기말고사가 끝나고 겨울방학이 다가오고 있었다. 오후 수업이 끝나고 학교 정문으로 향했다.」"
+           m "「경차가 한 대 주차돼있어 지나치려고 하는데, 다급한 목소리가 나를 불러세웠다」"
+# 등장 : 후배(harin_sweat_general) : 가운데
+           h2 "선배! 선배! 어디가요!"
+           m "?? 왜 거기서 나와? 이것도 네 차였어?"
+           h2 "더있다가 주차딱지 떼이겠어요! 빨리 타요!"
+           m "하린이가 운전해주는 차는 오랜만인데. 고맙게 탈게"
+           h2 "출발합니다~~!"
+# 퇴장 : 후배(harin_sweat_general)
+           m "「살짝 열어둔 창문사이로 찬 바람이 새어들었다. 기어위에 올라간 하린의 손에 내 손을 포갰다.」"
+
+# 모든 ui 내리고, ENDING_BG 표시
+################################ 게임 끝 #############################################
+################################ 게임 끝 #############################################
+################################ 게임 끝 #############################################
+#---------------------------------------------------------------------------------------------------------------------

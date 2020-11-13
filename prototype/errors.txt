@@ -2,15 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 931: invalid syntax
-    renpy.pause(1.0,hard=True;)
-                              ^
-    
-
-File "game/script.rpy", line 994: invalid syntax
-    renpy.pause(1.0,hard=True;)
-                              ^
-    
+File "game/script.rpy", line 1308: Line is indented, but the preceding say statement statement does not expect a block. Please check this line's indentation.
+    menu:
+    ^
 
 Ren'Py Version: Ren'Py 7.3.5.606
-Tue Nov 10 22:35:19 2020
+Sat Nov 14 02:26:53 2020
