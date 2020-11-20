@@ -1,0 +1,26 @@
+﻿I'm sorry, but an uncaught exception occurred.
+
+While running game code:
+  File "game/script.rpy", line 129, in script
+    $ playername, final = _return
+  File "game/script.rpy", line 129, in <module>
+    $ playername, final = _return
+TypeError: 'NoneType' object is not iterable
+
+-- Full Traceback ------------------------------------------------------------
+
+Full traceback:
+  File "game/script.rpy", line 129, in script
+    $ playername, final = _return
+  File "/home/wonjinyi/renpy/renpy-7.3.5-sdk/renpy/ast.py", line 914, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "/home/wonjinyi/renpy/renpy-7.3.5-sdk/renpy/python.py", line 2028, in py_exec_bytecode
+    exec bytecode in globals, locals
+  File "game/script.rpy", line 129, in <module>
+    $ playername, final = _return
+TypeError: 'NoneType' object is not iterable
+
+Linux-4.15.0-96-generic-x86_64-with-debian-buster-sid
+Ren'Py 7.3.5.606
+prototype 1.0
+Tue Nov 17 23:22:07 2020
