@@ -2,7 +2,7 @@
 이 브랜치는 프로젝트에 사용되는 모든 리소스를 모아두는 브랜치입니다.
 효과음, 배경, 배경음악, 일러스트, 원본 스토리 스크립트본, gui, 크레딧 스크린, 로딩배경, 그리고 그 외 배포를 위한 아이콘 등을 담고있습니다.
 
-<img src="./img_readme.png" width="640px" height="auto">
+<img src="./loveoflang.png" width="640px" height="auto">
 
 # Team SoleRowCoding
 |이름|메인포지션|참여내용|
