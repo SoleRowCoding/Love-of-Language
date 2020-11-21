@@ -1,5 +1,11 @@
+# resource 브랜치
+이 브랜치는 프로젝트에 사용되는 모든 리소스를 모아두는 브랜치입니다.
+효과음, 배경, 배경음악, 일러스트, 원본 스토리 스크립트본, gui, 크레딧 스크린, 로딩배경, 그리고 그 외 배포를 위한 아이콘 등을 담고있습니다.
+
+<img src="./img_readme.png" width="640px" height="auto">
+
 # Team SoleRowCoding
-|이름|메인포지션|
+|이름|메인포지션|참여내용|
 |------|---|---|
 |김학인|리드 개발자|PC기반 렌파이 프로젝트 초안 구축, 스토리 교정|
 |공상현|아티스트|캐릭터 일러스트 제작|
@@ -42,7 +48,7 @@
 * starlight by noonsol
 * dissociation by naoya sakamata
 
-
+# 문서
 * 디스코드 : 회의 , 공지 ( #어둠의-미연시-공지방 , #어둠의-미연시-회의방 2개 채널 사용 )
 https://discord.gg/kSqYkyh
 
