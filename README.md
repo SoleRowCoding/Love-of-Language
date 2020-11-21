@@ -1,9 +1,11 @@
 # Love of Language
 大作 비주얼노벨
 
-<img src="./vnResource/etcGraphic/screenshot_0.png" width="640px" height="auto">
+<img src="./readmeimg/screenshot_0.png" width="640px" height="auto">
+<img src="./readmeimg/screenshot_3.png" width="640px" height="auto">
+<img src="./readmeimg/screenshot_4.png" width="640px" height="auto">
 
-지금 구글PLAY에서 다운로드하기!
+> 지금 구글PLAY에서 다운로드하기!
 
 https://play.google.com/store/apps/details?id=com.wonj.in.loveoflang
 
