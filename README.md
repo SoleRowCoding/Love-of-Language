@@ -1,53 +1,28 @@
-# Love of Language
-大作 비주얼노벨
+# 언어의 사랑 프로젝트 파일 :: PC 환경
+이 브랜치는 PC (windows, linux)에서 돌아가는 파일을 빌드하기 위한 프로젝트 파일을 담고있습니다.
+현재 정상작동을 보장하지 않으며, 개발자의 관심을 받지 못하고 소외된 상태입니다.
 
-<img src="./vnResource/etcGraphic/screenshot_0.png" width="640px" height="auto">
-
-|이름|메인포지션|
-|------|---|
-|김학인|개발자|
-|공상현|아티스트|
-|이원진|매니저|
-|이창근|작가|
-
-```갓 전역한 복학생에게 "연애"라는 단어는 꿈에서나 들을 법한 말?
-우연에 우연이 겹치면, 이건 필연이야!```
+이 프로젝트 폴더는 안드로이드 타겟의 프로젝트보다 아주 구버전일 수 있습니다.
 
 
-허구한 날 놀기만 하던 컴퓨터동아리 '언어의 사랑'.
+* 리드 프로그래머 : 김학인 (PC빌드 대상 프로젝트 구축)
 
-국방부 퀘스트를 마치고 학교로 돌아왔더니 모범적인 학술 동아리가 되어있었다?
+PC환경의 빌드를 원한다면, 아래와 같은 개선이 필요하며 추가적으로 필요한 작업이 또 튀어나올 수 있습니다.
+* 스크립트를 최신의 android타겟 프로젝트와 맞추기
+* PC용 GUI 제작
+* 대사 표시창, 이름표시창, 일러스트 표시공간 설정
+* 테스트
+
+# 버전관리
+별도 개발 버전별, 기능별 브랜치는 생성하지 않으며 해당 브랜치에 커밋하며 원할 때 버전을 선언합니다.
+체계적인 버전관리 방식을 택해야 하는 경우, 이 레포지토리를 수정하지 말고 fork후 별도의 레포지토리에서 진행하시면 됩니다.
+
+# 소스 업데이트 규칙
+* 업데이트를 하는 분은 본인이 작성한 코드에 버그가 있는지 면밀히 살펴야 할 의무가 있습니다. 별도의 코드리뷰나 풀리퀘스트 과정을 거치지 않고, 바로 커밋하기 때문입니다.
+* 깃허브에 올라와있는 내용과, 배포된 빌드의 내용이 일치하는지 잘 살펴주세요. 
+
+# 사용설명
+스토리, 그리고 게임진행에 관여하는 모든 스크립트는 'script.rpy'에 있습니다. 별도 파일로 빼거나, 다른 기본파일에 포함된 내용은 없습니다. 단, '제작정보'(크레딧)은 screen.rpy에 있습니다. 이 외에는 모두 script.rpy에 포함되어있습니다.
 
 
-
-동아리의 변화를 이끌어낸 선배
-
-새로워진 동아리에 합류하는 신입생
-
-나도 모르는 사이 내 일상을 파고드는 두 사람!
-
-
-지루한 일상에 날아드는 사랑 가득한 일상, 지금 시작합니다.
-
-
-* 디스코드 : 회의 , 공지 ( #어둠의-미연시-공지방 , #어둠의-미연시-회의방 2개 채널 사용 )
-https://discord.gg/kSqYkyh
-
-* 피그마 : 디자인 뽑는 도구 ( 실시간 협업 가능 )
-https://www.figma.com/file/cQlrwnh7NBErR5gcYvGYpU/Love-Algorithm?node-id=0%3A1
-
-* 구글독스 : 스크립트 변환본
-https://docs.google.com/document/d/1oFg0oKCCAI3o7aQyrFhgFRqAc3xBkz_CM0YusNhmAUg/edit?usp=sharing
-
-* 구글독스 : 스토리 초안
-https://docs.google.com/document/d/10rEef5V4ZML139R-ThBqXOPvumIMVNy0Hhsq-G6FXBs/edit?usp=sharing
-
-* 구글시트 : 리소스 목록 및 사용현황
-https://docs.google.com/spreadsheets/d/1Q_wrq8kuoXBFgs4dZi_qC4_fwVJkDi_8hgkjLQOYvnQ/edit?usp=sharing
-
-* 구글 프레젠테이션 : 배경 미리보기
-https://docs.google.com/presentation/d/1xXyR0zlFNi8nl7KiUtAsv1G7Dw4wPmkniaypsZu82io/edit?usp=sharing
-
-[ 현재 사용하지 않음 ]
-구글시트 : 초기 진행계획 공유
-https://docs.google.com/spreadsheets/d/18R1x-e8VdCUUd1kiwhTNfsduCajRnSg2ci1vFSfIsSo/edit?usp=sharing
+개발에 관한 내용이 필요하시면 렌파이 메뉴얼을 참고하셔서 문제를 해결하시면 됩니다. 
